@@ -7,7 +7,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
-import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.core.AllOf.allOf;
 import static ru.kkuzmichev.simpleappforespresso.CustomViewAssertions.isRecycleView;
 import static ru.kkuzmichev.simpleappforespresso.CustomViewMatcher.recyclerViewSizeMatcher;
 
@@ -30,10 +30,10 @@ import io.qameta.allure.android.runners.AllureAndroidJUnit4;
 
 public class IdlingResourcesTest {
 
-    private final ViewInteraction appCompatImageButton = onView(withContentDescription("Open navigation drawer"));
-    private final ViewInteraction checkedTextGallery = onView(withId(R.id.nav_gallery));
-    private final ViewInteraction itemSeventh = onView(allOf(withId(R.id.item_number), withText("7")));
-    private final ViewInteraction recycleListing = onView(withId(R.id.recycle_view));
+    private ViewInteraction appCompatImageButton = onView(withContentDescription("Open navigation drawer"));
+    private ViewInteraction checkedTextGallery = onView(withId(R.id.nav_gallery));
+    private ViewInteraction itemSeventh = onView(allOf(withId(R.id.item_number), withText("7")));
+    private ViewInteraction recycleListing = onView(withId(R.id.recycle_view));
 
     @Rule
 //    public ActivityScenarioRule<MainActivity> mActivityScenarioRule =

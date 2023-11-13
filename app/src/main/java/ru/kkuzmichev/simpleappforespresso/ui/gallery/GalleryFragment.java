@@ -54,7 +54,7 @@ public class GalleryFragment extends Fragment {
 
     private void setLists() {
         for (int i = 0; i < 10; i++) {
-            itemList.add(new GalleryItem("My title", "My description", (i+1)));
+            itemList.add(new GalleryItem("My title", "My description", (i + 1)));
         }
     }
 
